@@ -59,7 +59,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               }
             }
           } else {
-            Polymer._warn('behavior is null, check for missing or 404 import');
+            Polymer.Base._warn('behavior is null, check for missing or 404 import');
           }
         }
       }
@@ -173,7 +173,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Polymer.Class = function(info) {
       if (!info) {
-        Polymer._warn('Polymer.Class requires `info` argument');
+        Polymer.Base._warn('Polymer.Class requires `info` argument');
       }
       var klass = LegacyElementMixin(getNativeConstructor(info.extends));
       var behaviors = flattenBehaviors(info.behaviors);
